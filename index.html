@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloseOut | Restaurant Closing Made Clear</title>
+<style>
+:root{--ink:#17221d;--muted:#65736b;--paper:#f7f4ee;--card:#fff;--accent:#2f6b4f;--line:#d9ded9;--warn:#8a4b2b}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+.wrap{width:min(1100px,92%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}.brand{font-weight:900;letter-spacing:.08em}.pill,.btn{display:inline-block;border:0;border-radius:999px;padding:12px 18px;font-weight:800;text-decoration:none;cursor:pointer}.btn{background:var(--accent);color:white}.pill{background:#e6eee9;color:var(--accent);font-size:.85rem}
+.hero{padding:70px 0 55px}.hero h1{font-size:clamp(2.5rem,8vw,5.5rem);line-height:.95;max-width:850px;margin:15px 0 22px}.hero p{font-size:1.15rem;max-width:680px;color:var(--muted)}
+section{padding:55px 0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:900;font-size:.78rem;color:var(--accent)}h2{font-size:clamp(1.8rem,5vw,3rem);line-height:1.05;margin:10px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}.card h3{margin-top:0}
+.demo{background:#14231c;color:#f7f4ee}.demo .eyebrow{color:#9fd0b5}.dashboard{background:#fff;color:var(--ink);border-radius:22px;padding:20px}.demohead{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.progress{height:12px;background:#e8ece9;border-radius:20px;overflow:hidden}.bar{height:100%;background:var(--accent);width:0;transition:.2s}.stats{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.stat{background:#eef3ef;padding:10px 14px;border-radius:12px;font-weight:800}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filter{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 12px;cursor:pointer}.filter.active{background:var(--ink);color:white}
+.task{display:flex;align-items:flex-start;gap:12px;padding:14px 4px;border-bottom:1px solid #e8e8e8}.task input{width:22px;height:22px;accent-color:var(--accent)}.task.done .taskname{text-decoration:line-through;color:#7b857f}.tag{font-size:.72rem;padding:3px 8px;border-radius:99px;background:#edf0ee;color:#526158;margin-left:6px}.warning{margin-top:15px;padding:12px;border-radius:12px;background:#fff0e7;color:var(--warn);font-weight:800}
+table{width:100%;border-collapse:collapse;background:white;border-radius:16px;overflow:hidden}th,td{text-align:left;padding:14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#edf2ee}
+.small{font-size:.9rem;color:var(--muted)}.cta{text-align:center;background:#e5eee8;border-radius:24px;padding:45px 20px;margin:35px auto}.thanks{display:none;margin-top:14px;font-weight:800;color:var(--accent)}
+footer{padding:35px 0;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:35px}section{padding:38px 0}th,td{padding:10px;font-size:.88rem}}
+</style>
+</head>
+<body>
+<div class="wrap nav"><div class="brand">CLOSEOUT</div><a class="btn" href="#demo">Try the demo</a></div>
+
+<header class="wrap hero">
+<span class="pill">Concept project • sample data only</span>
+<h1>Know what’s done before everyone clocks out.</h1>
+<p>CloseOut is a mobile-first closing task tracker for small independent restaurants. Staff tick off end-of-night jobs while supervisors get one clear view of what is finished and what still needs attention.</p>
+<a class="btn" href="#demo">Try the demo</a>
+</header>
+
+<section class="wrap">
+<div class="eyebrow">The problem</div><h2>Closing should not depend on memory.</h2>
+<p>For closing supervisors and staff in small, single-location restaurants, end-of-night work can be split across floor, bar, kitchen and supervisor duties. When the process relies on verbal reminders, memory or paper lists, it is harder to see the whole close at a glance.</p>
+<div class="grid">
+<div class="card"><h3>Who uses it?</h3><p>Closing supervisors and closing staff working across floor, bar and kitchen.</p></div>
+<div class="card"><h3>Who decides?</h3><p>The restaurant owner or general manager chooses whether to adopt the system.</p></div>
+<div class="card"><h3>What they need</h3><p>A fast, phone-friendly view of tasks, progress and unfinished work before the team leaves.</p></div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">Requirements</div><h2>Six things the solution must do.</h2>
+<div class="grid">
+<div class="card"><b>01</b><p>Work comfortably on a phone during a busy close.</p></div>
+<div class="card"><b>02</b><p>Organise tasks by floor, bar, kitchen and supervisor.</p></div>
+<div class="card"><b>03</b><p>Let staff mark individual jobs complete.</p></div>
+<div class="card"><b>04</b><p>Calculate progress automatically.</p></div>
+<div class="card"><b>05</b><p>Keep task status after a refresh.</p></div>
+<div class="card"><b>06</b><p>Make unfinished work obvious to the supervisor.</p></div>
+</div>
+</section>
+
+<section class="demo" id="demo">
+<div class="wrap">
+<div class="eyebrow">Working demo</div><h2>Tonight’s close</h2>
+<p><b>All names and tasks below are fictional sample data.</b> Tick tasks, filter by area, then refresh the page. Your changes remain saved on this device.</p>
+<div class="dashboard">
+<div class="demohead"><div><b>Sample Restaurant • Friday close</b><div class="small">12 sample records</div></div><button class="filter" id="reset">Reset sample data</button></div>
+<div class="stats"><div class="stat"><span id="count">0</span>/12 complete</div><div class="stat"><span id="pct">0</span>% progress</div><div class="stat"><span id="left">12</span> remaining</div></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div class="filters" id="filters"></div>
+<div id="tasks"></div>
+<div class="warning" id="warning"></div>
+</div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">How it works</div><h2>Three steps. No training manual required.</h2>
+<div class="grid">
+<div class="card"><h3>1. Open</h3><p>The team opens the closing checklist on a phone and sees tonight’s tasks.</p></div>
+<div class="card"><h3>2. Complete</h3><p>Staff tick jobs as they finish them. CloseOut automatically recalculates progress.</p></div>
+<div class="card"><h3>3. Check</h3><p>The supervisor filters by area and sees exactly what remains before lock-up.</p></div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">Fit</div><h2>Requirements mapped to the solution.</h2>
+<table>
+<tr><th>Requirement</th><th>How CloseOut meets it</th></tr>
+<tr><td>Phone-friendly</td><td>Responsive single-page interface designed for taps and small screens.</td></tr>
+<tr><td>Tasks by area</td><td>Every task has Floor, Bar, Kitchen or Supervisor status and can be filtered.</td></tr>
+<tr><td>Mark jobs complete</td><td>Interactive checkboxes update each record immediately.</td></tr>
+<tr><td>Automatic progress</td><td>JavaScript calculates completed, remaining and percentage values from task status.</td></tr>
+<tr><td>Survive refresh</td><td>Completion state is stored in the browser using localStorage.</td></tr>
+<tr><td>Spot unfinished work</td><td>The dashboard shows remaining count plus an automatic warning until all jobs are complete.</td></tr>
+</table>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">Existing alternatives</div><h2>The problem is already being solved, but CloseOut narrows the job.</h2>
+<div class="grid">
+<div class="card"><h3>Jolt</h3><p>Jolt provides an operations suite with tasks, forms and opening/closing checklists. CloseOut deliberately focuses on one simple closing view for a small single-location restaurant.</p><a href="https://www.jolt.com/audit-software/" target="_blank" rel="noopener">Source: Jolt</a><p class="small">Source checked 30 October 2026.</p></div>
+<div class="card"><h3>Miseo</h3><p>Miseo offers digital hospitality checklists with deadlines, status, employee/time records and history. CloseOut is a smaller concept centred on the immediate end-of-night handoff.</p><a href="https://miseo.dk/en/features/checklists/" target="_blank" rel="noopener">Source: Miseo</a><p class="small">Source checked 30 October 2026.</p></div>
+<div class="card"><h3>How teams cope today</h3><p>Paper lists, verbal reminders and staff knowledge can handle the basic process, but do not provide the same live progress view demonstrated here.</p></div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">Sustainability</div><h2>A simple subscription assumption.</h2>
+<p><b>Assumption:</b> CloseOut could be sustained at €19 per restaurant per month for the core closing tracker. This figure is an assumption for this project, not a tested market price. The value proposition is reduced supervisor chasing and a clearer end-of-night handoff.</p>
+</section>
+
+<section class="wrap">
+<div class="eyebrow">User test</div><h2>Tested by someone who did not build it.</h2>
+<div class="card">
+<p><b>Replace this paragraph after your real test:</b> Ask one person to use the demo on their phone. Record what they tried, one thing that confused or broke, and the specific change you made. Do not leave this placeholder in the submitted version.</p>
+</div>
+</section>
+
+<section class="wrap">
+<div class="cta"><div class="eyebrow">Close with confidence</div><h2>Ready to make the last 20 minutes of the shift clearer?</h2><button class="btn" id="interest">Register interest</button><div class="thanks" id="thanks">Thanks! This concept form does not collect or send any data.</div></div>
+</section>
+
+<footer class="wrap">CloseOut is a fictitious student concept. All demo data is invented sample data. No real restaurant, employee or customer information is used.</footer>
+
+<script>
+const seed=[
+{id:1,area:"Floor",name:"Reset dining tables",who:"Aoife"},
+{id:2,area:"Floor",name:"Sweep and mop dining floor",who:"Ben"},
+{id:3,area:"Floor",name:"Check and restock bathrooms",who:"Aoife"},
+{id:4,area:"Bar",name:"Clean coffee machine",who:"Maya"},
+{id:5,area:"Bar",name:"Restock drinks fridge",who:"Maya"},
+{id:6,area:"Bar",name:"Wash and store bar tools",who:"Leo"},
+{id:7,area:"Kitchen",name:"Sanitise prep surfaces",who:"Noah"},
+{id:8,area:"Kitchen",name:"Empty and reline bins",who:"Noah"},
+{id:9,area:"Kitchen",name:"Sweep and mop kitchen floor",who:"Sara"},
+{id:10,area:"Supervisor",name:"Complete cash close check",who:"Jamie"},
+{id:11,area:"Supervisor",name:"Check equipment shutdown",who:"Jamie"},
+{id:12,area:"Supervisor",name:"Final doors and lock-up check",who:"Jamie"}];
+let saved=JSON.parse(localStorage.getItem("closeout-state")||"{}");
+let active="All";
+const areas=["All","Floor","Bar","Kitchen","Supervisor"];
+function renderFilters(){document.getElementById("filters").innerHTML=areas.map(a=>`<button class="filter ${a===active?"active":""}" onclick="setFilter('${a}')">${a}</button>`).join("")}
+function setFilter(a){active=a;render()}
+function render(){
+renderFilters();
+const list=seed.filter(t=>active==="All"||t.area===active);
+document.getElementById("tasks").innerHTML=list.map(t=>`<label class="task ${saved[t.id]?"done":""}"><input type="checkbox" ${saved[t.id]?"checked":""} onchange="toggle(${t.id},this.checked)"><div><span class="taskname"><b>${t.name}</b></span><span class="tag">${t.area}</span><div class="small">Assigned to ${t.who} • sample data</div></div></label>`).join("");
+const done=seed.filter(t=>saved[t.id]).length,pct=Math.round(done/seed.length*100),left=seed.length-done;
+document.getElementById("count").textContent=done;document.getElementById("pct").textContent=pct;document.getElementById("left").textContent=left;document.getElementById("bar").style.width=pct+"%";
+document.getElementById("warning").textContent=left?`${left} closing task${left===1?"":"s"} still need attention before lock-up.`:"All sample closing tasks are complete. Ready for final supervisor check.";
+}
+function toggle(id,v){saved[id]=v;localStorage.setItem("closeout-state",JSON.stringify(saved));render()}
+document.getElementById("reset").onclick=()=>{saved={};localStorage.removeItem("closeout-state");render()};
+document.getElementById("interest").onclick=()=>document.getElementById("thanks").style.display="block";
+render();
+</script>
+</body>
+</html>
