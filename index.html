@@ -107,7 +107,7 @@ footer{padding:35px 0;color:var(--muted);font-size:.9rem}
 <section class="wrap">
 <div class="eyebrow">User test</div><h2>Tested by someone who did not build it.</h2>
 <div class="card">
-<p><b>Replace this paragraph after your real test:</b> Ask one person to use the demo on their phone. Record what they tried, one thing that confused or broke, and the specific change you made. Do not leave this placeholder in the submitted version.</p>
+<p>A tester who did not build the project completed the full checklist on a phone, including the supervisor tasks. They noticed that after every task was completed, the message still said the close was “Ready for final supervisor check”, even though the supervisor checks had already been ticked off. Based on this feedback, the final completion message was changed to clearly confirm that all closing tasks are complete and the CloseOut process is finished for the night.</p>
 </div>
 </section>
 
@@ -142,7 +142,7 @@ const list=seed.filter(t=>active==="All"||t.area===active);
 document.getElementById("tasks").innerHTML=list.map(t=>`<label class="task ${saved[t.id]?"done":""}"><input type="checkbox" ${saved[t.id]?"checked":""} onchange="toggle(${t.id},this.checked)"><div><span class="taskname"><b>${t.name}</b></span><span class="tag">${t.area}</span><div class="small">Assigned to ${t.who} • sample data</div></div></label>`).join("");
 const done=seed.filter(t=>saved[t.id]).length,pct=Math.round(done/seed.length*100),left=seed.length-done;
 document.getElementById("count").textContent=done;document.getElementById("pct").textContent=pct;document.getElementById("left").textContent=left;document.getElementById("bar").style.width=pct+"%";
-document.getElementById("warning").textContent=left?`${left} closing task${left===1?"":"s"} still need attention before lock-up.`:"All sample closing tasks are complete. Ready for final supervisor check.";
+document.getElementById("warning").textContent=left?`${left} closing task${left===1?"":"s"} still need attention before lock-up.`:"All closing tasks are complete. CloseOut complete for tonight.";
 }
 function toggle(id,v){saved[id]=v;localStorage.setItem("closeout-state",JSON.stringify(saved));render()}
 document.getElementById("reset").onclick=()=>{saved={};localStorage.removeItem("closeout-state");render()};
